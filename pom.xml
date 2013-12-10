@@ -164,4 +164,16 @@
             </plugin>
         </plugins>
     </reporting>
+
+    <!--
+        This is required for attaching Voldemort client API
+        which is not located in any Maven repository
+     -->
+    <repositories>
+        <repository>
+            <id>in-project</id>
+            <name>In Project Repo</name>
+            <url>file://${project.basedir}/libs</url>
+        </repository>
+    </repositories>
 </project>
