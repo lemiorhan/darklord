@@ -7,7 +7,22 @@ It is named after the fictional Harry Potter villain [Lord Voldemort](http://en.
 
 Project Voldemort is a distributed data store that is designed as a key-value store used by LinkedIn for high-scalability storage.
 
-Project Voldemort already has a Java API which is used by Voldemort internally. But DarkLord provides a tiny API as an abstraction on top of official Voldemort client API. 
+Project Voldemort already has a Java API which is used by Voldemort internally. But DarkLord provides a tiny API as an abstraction on top of official Voldemort client API.
+
+Purpose
+-------
+
+The current design of original Voldemort API is not TDD friendly. The main aim to build such an API is build Voldemort-dependent software by using test driven development.
+
+Client API
+----------
+
+*darklord-client* API provides a java client using the original Voldemort Java API.
+
+Server API
+----------
+
+*darklord-server* API provides a server implementation to startup on local machines for testing purposes. This provides capability to develop or test without any need to Voldemort server installation.
 
 Copyright and License
 =====================
