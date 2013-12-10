@@ -24,6 +24,11 @@ Server API
 
 *darklord-server* API provides a server implementation to startup on local machines for testing purposes. This provides capability to develop or test without any need to Voldemort server installation.
 
+Continuous Integration
+------------
+
+[![build status](https://secure.travis-ci.org/lemiorhan/darklord.png)](http://travis-ci.org/lemiorhan/darklord)
+
 Copyright and License
 =====================
 Copyright 2013 [Lemi Orhan Ergin](http://www.lemiorhanergin.com)
