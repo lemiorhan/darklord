@@ -1,7 +1,7 @@
 DarkLord
 ========
 
-DarkLord is a Java API for Project Voldemort. It uses official Voldemort Java API and provides additional abstraction.
+DarkLord is a Java API for Project Voldemort. It uses official Voldemort Java API and provides additional abstraction. It is named after the fictional Harry Potter villain Lord Voldemort. The Dark Lord is used as a nick name for the Lord Voldemort. In the series, almost no witch or wizard dares to speak his name, instead referring to him by epithets such as "You-Know-Who", "He-Who-Must-Not-Be-Named" or "the Dark Lord".
 
 Project Voldemort is a distributed data store that is designed as a key-value store used by LinkedIn for high-scalability storage.
 
