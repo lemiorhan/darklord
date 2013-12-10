@@ -171,9 +171,8 @@
      -->
     <repositories>
         <repository>
-            <id>in-project</id>
-            <name>In Project Repo</name>
-            <url>file://${project.basedir}/libs</url>
+            <id>voldemort</id>
+            <url>http://maven.research-infrastructures.eu/nexus/content/repositories/dnet-deps</url>
         </repository>
     </repositories>
 </project>
