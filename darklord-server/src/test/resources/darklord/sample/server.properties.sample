@@ -1,0 +1,436 @@
+# #######################################
+# The content of this file is gathered
+# from VoldemortConfig class
+# #######################################
+
+# Int, default: value of environment variable VOLDEMORT_NODE_ID_VAR_NAME
+# node.id =
+ 
+# String
+# voldemort.home =
+ 
+# String, default: voldemortHome + data
+# data.directory =
+ 
+# String, default: voldemortHome + config
+# metadata.directory =
+
+# Bytes, default: 200 * 1024 * 1024 (200MB)
+# bdb.cache.size =
+
+# Boolean, default: false
+# bdb.write.transactions =
+
+# Boolean, default: false
+# bdb.flush.transactions =
+ 
+# String, default: this.dataDirectory + bdb
+# bdb.data.directory =
+ 
+# Bytes, default: 60 * 1024 * 1024 (60MB)
+# bdb.max.logfile.size =
+ 
+# Int, default: 512
+# bdb.btree.fanout = 
+ 
+# Long, default: 200 * 1024 * 1024 (200MB)
+# bdb.checkpoint.interval.bytes =
+ 
+# Long, default: 30 * Time.MS_PER_SECOND
+# bdb.checkpoint.interval.ms =
+ 
+# Boolean, default: false
+# bdb.one.env.per.store =
+ 
+# Int, default: 0
+# bdb.cleaner.min.file.utilization =
+ 
+# Int, default: 50
+# bdb.cleaner.minUtilization =
+ 
+# Int, default: 1
+# bdb.cleaner.threads =
+ 
+# by default, wake up the cleaner every time we write log file size *
+# utilization% bytes. So, by default 30MB
+# Long, default: 30 * 1024 * 1024
+# bdb.cleaner.interval.bytes =
+ 
+# Int, default: 8192
+# bdb.cleaner.lookahead.cache.size =
+ 
+# Long, default: 500
+# bdb.lock.timeout.ms =
+ 
+# Int, default: 7
+# bdb.lock.nLockTables =
+ 
+# Int, default: 2048
+# bdb.log.fault.read.size =
+ 
+# Int, default: 8192
+# bdb.log.iterator.read.size =
+ 
+# Boolean, default: false
+# bdb.fair.latches =
+ 
+# Boolean, default: false
+# bdb.checkpointer.high.priority =
+ 
+# Int, default: 0
+# bdb.cleaner.max.batch.files =
+ 
+# Boolean, default: true
+# bdb.lock.read_uncommitted =
+ 
+# Long, default: 5 * Time.MS_PER_SECOND
+# bdb.stats.cache.ttl.ms =
+ 
+# Boolean, default: true
+# bdb.expose.space.utilization =
+ 
+# Long, default: 0
+# bdb.minimum.shared.cache =
+ 
+# Boolean, default: false
+# bdb.cleaner.lazy.migration =
+ 
+# Boolean, default: true
+# bdb.cache.evictln =
+ 
+# Boolean, default: true
+# bdb.minimize.scan.impact =
+ 
+# Boolean, default: true
+# bdb.prefix.keys.with.partitionid =
+
+# Boolean, default: false
+# bdb.evict.by.level =
+ 
+# Boolean, default: false
+# bdb.proactive.background.migration =
+ 
+# Boolean, default: false
+# bdb.checkpointer.off.batch.writes =
+
+# Int, default: 1
+# readonly.backups =
+ 
+# String, default: BinarySearchStrategy.class.getName()
+# readonly.search.strategy =
+
+# String, default: dataDirectory + "read-only"
+# readonly.data.directory =
+
+# Int, default: 0
+# readonly.delete.backup.ms =
+ 
+# Bytes, default: 0
+# fetcher.max.bytes.per.sec =
+ 
+# Bytes, default: 0
+# fetcher.min.bytes.per.sec =
+ 
+# Bytes, default: 25 * 1024 * 1024 (25MB)
+# fetcher.reporting.interval.bytes =
+
+# Bytes, default: 64 * 1024 (64KB)
+# hdfs.fetcher.buffer.size =
+
+# String, default: metadataDirectory + voldemrt.headless.keytab
+# readonly.keytab.path =
+
+# String, default: voldemrt
+# readonly.kerberos.user =
+
+# String, default: metadataDirectory + "hadoop-conf"
+# readonly.hadoop.config.path =
+
+# Boolean, default: true
+# readonly.mlock.index =
+
+# String, default: root
+# mysql.user =
+ 
+# String, default: ''
+# mysql.password =
+ 
+# String, default: localhost
+# mysql.host =
+ 
+# Int, default: 3306
+# mysql.port =
+ 
+# String, default: voldemort
+# mysql.database =
+ 
+# Int, default: 0
+# testing.slow.queueing.get.ms =
+ 
+# Int, default: 0
+# testing.slow.queueing.getall.ms =
+ 
+# Int, default: 0
+# testing.slow.queueing.getversions.ms =
+
+# Int, default: 0
+# testing.slow.queueing.put.ms =
+ 
+# Int, default: 0
+# testing.slow.queueing.delete.ms =
+
+# Int, default: 0
+# testing.slow.concurrent.get.ms =
+ 
+# Int, default: 0
+# testing.slow.concurrent.getall.ms =
+
+# Int, default: 0
+# testing.slow.concurrent.getversions.ms =
+
+# Int, default: 0
+# testing.slow.concurrent.put.ms =
+ 
+# Int, default: 0
+# testing.slow.concurrent.delete.ms =
+
+# Int, default: 100
+# max.threads =
+ 
+# Int, default: Math.max(1, maxThreads / 2)
+# core.threads =
+
+# Admin client should have less threads but very high buffer size.
+# Int, default: 20
+# admin.max.threads =
+ 
+# Int, default: Math.max(1, adminMaxThreads / 2)
+# admin.core.threads =
+ 
+# Bytes, default: 10 * 1000 * 1000 (10MB)
+# admin.streams.buffer.size =
+
+# Int, default: 60 (1min)
+# admin.client.connection.timeout.sec =
+ 
+# Int, default: 24 * 60 * 60 (24h)
+# admin.client.socket.timeout.sec =
+
+# Bytes, default: 10 * 1000 * 1000 (1MB)
+# stream.read.byte.per.sec =
+ 
+# Bytes, default: 10 * 1000 * 1000 (10MB)
+# stream.write.byte.per.sec =
+
+# Int, default: 5000
+# socket.timeout.ms =
+ 
+# Bytes, default: 64 * 1024 (64KB)
+# socket.buffer.size =
+ 
+# Boolean, default: false
+# socket.keepalive =
+
+# Boolean, default: true
+# enable.nio.connector =
+ 
+# Int, default: Math.max(8, Runtime.getRuntime().availableProcessors())
+# nio.connector.selectors =
+
+# Int, default: Math.max(8, Runtime.getRuntime().availableProcessors())
+# nio.admin.connector.selectors =
+
+# Int, default: 256
+# nio.acceptor.backlog =
+
+# Int, default: 4
+# client.selectors =
+ 
+# Int, default: 50
+# client.max.connections.per.node =
+ 
+# Int, default: 500
+# client.connection.timeout.ms =
+ 
+# Int, default: 15000
+# client.routing.timeout.ms =
+ 
+# Int, default: reference to clientRoutingTimeoutMs
+# client.routing.get.timeout.ms =
+
+# Int, default: reference to clientRoutingTimeoutMs
+# client.routing.getall.timeout.ms =
+
+# Int, default: reference to clientRoutingTimeoutMs
+# client.routing.put.timeout.ms =
+
+# Int, default: reference to clientTimeoutConfig
+# client.routing.getversions.timeout.ms =
+
+# Int, default: reference to clientRoutingTimeoutMs
+# client.routing.delete.timeout.ms =
+
+# Int, default: false
+# client.routing.allow.partial.getall =
+
+# Int, default: 500
+# client.max.threads =
+ 
+# Int, default: 100000
+# client.thread.idle.ms =
+ 
+# Int, default: 1000
+# client.max.queued.requests =
+
+# Boolean, default: true
+# http.enable =
+ 
+# Boolean, default: true
+# socket.enable =
+ 
+# Boolean, default: true
+# admin.enable =
+ 
+# Boolean, default: true
+# jmx.enable =
+ 
+# Boolean, default: true
+# enable.pipeline.routed.store =
+ 
+# Boolean, default: true
+# slop.enable =
+ 
+# Boolean, default: true
+# slop.pusher.enable =
+ 
+# Bytes, default: 10 * 1000 * 1000 (10MB)
+# slop.write.byte.per.sec =
+ 
+# Boolean, default: true
+# enable.verbose.logging =
+ 
+# Boolean, default: true
+# enable.stat.tracking =
+ 
+# Boolean, default: true
+# enable.server.routing =
+ 
+# Boolean, default: true
+# enable.metadata.checking =
+ 
+# Boolean, default: false
+# enable.gossip =
+ 
+# Boolean, default: true
+# enable.rebalancing =
+ 
+# Boolean, default: true
+# enable.repair =
+ 
+# Boolean, default: false
+# enable.jmx.clustername =
+
+# Int, default: 30 * 1000 (30sec)
+# gossip.interval.ms =
+
+# Bytes, default: 10 * 1000 * 1000 (10MB)
+# slop.write.byte.per.sec =
+ 
+# Bytes, default: 10 * 1000 * 1000 (10MB)
+# slop.read.byte.per.sec =
+ 
+# String, default: bdb
+# slop.store.engine =
+ 
+# Long, default: 5 * 60 * 1000 (5h)
+# slop.frequency.ms =
+ 
+# Int, default: 100
+# slop.batch.size =
+ 
+# String, default: streaming
+# pusher.type =
+ 
+# Int, default: 0
+# slop.zones.terminate =
+ 
+# Int, default: 6
+# scheduler.threads =
+ 
+# Boolean, default: true
+# service.interruptible =
+
+# Int, default: 1
+# num.scan.permits =
+
+# List, default: [BdbStorageConfiguration, MysqlStorageConfiguration, InMemoryStorageConfiguration, CacheStorageConfiguration, ReadOnlyStorageConfiguration]
+# storage.configs =
+
+# start at midnight (0-23)
+# Int, default: 0
+# retention.cleanup.first.start.hour =
+
+# start next day by default (1=SUN, 2=MON, 3=TUE, 4=WED, 5=THU, 6=FRI, 7=SAT)
+# Int, default: 1
+# retention.cleanup.first.start.day =
+
+# repeat every 24 hours
+# Int, default: 24
+# retention.cleanup.period.hours =
+
+# should the retention job always start at the 'start time' specified
+# Boolean, default: true
+# retention.cleanup.pin.start.time =
+
+# should the online reads filter out stale values when reading them ?
+# Boolean, default: false
+# enforce.retention.policy.on.read =
+
+# should the online reads issue deletes to clear out stale values when reading them?
+# Boolean, default: false
+# delete.expired.values.on.read =
+
+# String, default: vp1
+# request.format =
+
+# rebalancing parameters
+# Long, default: 10 * 24 * 60 * 60 (10d)
+# rebalancing.timeout.seconds =
+ 
+# Int, default: 3
+# max.parallel.stores.rebalancing =
+ 
+# Boolean, default: true
+# rebalancing.optimization =
+ 
+# Boolean, default: true
+# use.partition.scan.for.rebalance =
+
+# String, default:
+# failuredetector.implementation = ThresholdFailureDetector
+
+# Long, default: 30000
+# failuredetector.bannage.period =
+
+# Int, default: 95
+# failuredetector.threshold =
+
+# Int, default: 30
+# failuredetector.threshold.countminimum =
+
+# Long, default: 30000
+# failuredetector.threshold.interval =
+
+# Long, default: 10000
+# failuredetector.asyncrecovery.interval =
+
+# List, default: [ConnectException, UnknownHostException, NoRouteToHostException]
+# failuredetector.catastrophic.error.types =
+
+# Long, default: 5000
+# failuredetector.request.length.threshold =
+
+# network class loader disable by default.
+# Boolean, default: false
+# enable.network.classloader =
+ 

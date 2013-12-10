@@ -1,0 +1,10 @@
+# max_connections = 
+# max_total_connections = 
+# max_threads = 
+# thread_idle_ms = 
+# admin_connection_timeout_sec = 
+# admin_socket_timeout_sec = 
+# admin_socket_buffer_size = 
+# admin_socket_keepalive = 
+# restore.data.timeout.sec = 
+# max.backoff.delay.ms = 

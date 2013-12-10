@@ -1,6 +1,35 @@
-*.class
+# git-ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
 
-# Package Files #
+# IDEA Config files
+*.iml
+*.ipr
+*.iws
+.idea
+target/
+
+# Eclipse Config files
+.project
+.settings
+.classpath
+
+# Project generated files
+*.log
+*.patch
 *.jar
-*.war
-*.ear
+*.ser
+
+# OS generated files
+*.pid
+*.tmp
+*.old
+*~
+*.diff
+
+#Project related files
+data/
+.clover/
