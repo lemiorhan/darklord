@@ -1,5 +1,6 @@
 DarkLord
 ========
+[![build status](https://secure.travis-ci.org/lemiorhan/darklord.png)](http://travis-ci.org/lemiorhan/darklord)
 
 DarkLord is a Java API for [Project Voldemort](http://www.project-voldemort.com/voldemort/). It uses official Voldemort Java API and provides additional abstraction.
 
@@ -24,10 +25,10 @@ Server API
 
 *darklord-server* API provides a server implementation to startup on local machines for testing purposes. This provides capability to develop or test without any need to Voldemort server installation.
 
-Continuous Integration
-------------
-
-[![build status](https://secure.travis-ci.org/lemiorhan/darklord.png)](http://travis-ci.org/lemiorhan/darklord)
+Main Dependencies
+-----------------
+* Java 7
+* Voldemort-1.3.0 
 
 Copyright and License
 =====================
