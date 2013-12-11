@@ -12,15 +12,15 @@ Project Voldemort already has a Java API which is used by Voldemort internally. 
 
 ### Purpose
 
-The current design of original Voldemort API is not TDD friendly. The main aim to build such an API is build Voldemort-dependent software by using test driven development.
+The current design of original Voldemort API is not TDD friendly. It's sometimes impossible to write unit tests using the API. The main aim to build a new abstraction on top of Voldemort API is to be able to have less-features but cleaner codebase.
 
-### Client API
+### DarkLord Client API
 
 *darklord-client* API provides a java client using the original Voldemort Java API.
 
-### Server API
+### DarkLord Server API
 
-*darklord-server* API provides a server implementation to startup on local machines for testing purposes. This provides capability to develop or test without any need to Voldemort server installation.
+*darklord-server* API provides a server implementation to startup Voldemort instances on local machines for testing purposes. This provides capability to develop or test without any need to Voldemort server installation.
 
 ### Main Dependencies
 
