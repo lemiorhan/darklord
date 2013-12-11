@@ -1,6 +1,6 @@
 DarkLord
 ========
-[![build status](https://secure.travis-ci.org/lemiorhan/darklord.png)](http://travis-ci.org/lemiorhan/darklord)
+[![build status](https://secure.travis-ci.org/lemiorhan/darklord.png)](http://travis-ci.org/lemiorhan/darklord) [![Coverage Status](https://coveralls.io/repos/lemiorhan/darklord/badge.png?branch=master)](https://coveralls.io/r/lemiorhan/darklord?branch=master)
 
 DarkLord is a Java API for [Project Voldemort](http://www.project-voldemort.com/voldemort/). It uses official Voldemort Java API and provides additional abstraction.
 
