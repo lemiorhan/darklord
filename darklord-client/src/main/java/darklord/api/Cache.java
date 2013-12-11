@@ -1,4 +1,4 @@
-package darklord.client;
+package darklord.api;
 
 /**
  * This is the main interface for a cache object. It has methods for CRUD operations. The implementations of Cache

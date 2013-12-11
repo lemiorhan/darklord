@@ -1,4 +1,4 @@
-package darklord.client;
+package darklord.api;
 
 /**
  * CacheFactory is a simple factory to create Cache objects for the given cache names. For example cache names could be

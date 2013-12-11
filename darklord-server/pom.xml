@@ -31,13 +31,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>darklord</groupId>
-            <artifactId>darklord-client</artifactId>
-            <scope>test</scope>
-            <version>${project.version}</version>
-        </dependency>
-
         <!-- VOLDEMORT SERVER DEPENDENCIES -->
         <dependency>
             <groupId>org.apache.avro</groupId>

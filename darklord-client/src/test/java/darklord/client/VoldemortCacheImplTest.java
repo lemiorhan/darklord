@@ -1,6 +1,6 @@
 package darklord.client;
 
-import darklord.client.impl.VoldemortCacheImpl;
+import darklord.api.Cache;
 import org.apache.commons.lang.SerializationUtils;
 import org.junit.Before;
 import org.junit.Test;

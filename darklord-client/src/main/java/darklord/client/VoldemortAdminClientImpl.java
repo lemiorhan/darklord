@@ -1,7 +1,7 @@
-package darklord.client.impl;
+package darklord.client;
 
 import darklord.client.utils.PropertiesUtils;
-import darklord.client.VoldemortAdminClient;
+import darklord.api.VoldemortAdminClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import voldemort.client.protocol.admin.AdminClient;

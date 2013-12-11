@@ -1,6 +1,5 @@
 package darklord.client;
 
-import darklord.client.impl.VoldemortAdminClientImpl;
 import org.junit.Before;
 import org.junit.Test;
 

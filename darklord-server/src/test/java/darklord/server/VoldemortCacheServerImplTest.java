@@ -1,6 +1,5 @@
 package darklord.server;
 
-import darklord.server.impl.VoldemortCacheServerImpl;
 import org.junit.Before;
 import org.junit.Test;
 import voldemort.common.service.VoldemortService;

@@ -1,4 +1,4 @@
-package darklord.server;
+package darklord.api;
 
 /**
  * It represents a cache server running on local machines. Normally no instance of CacheServer is required in

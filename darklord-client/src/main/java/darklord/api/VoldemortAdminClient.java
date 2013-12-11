@@ -1,4 +1,4 @@
-package darklord.client;
+package darklord.api;
 
 import java.util.List;
 

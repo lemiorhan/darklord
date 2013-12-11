@@ -1,6 +1,6 @@
 package darklord.client;
 
-import darklord.client.impl.VoldemortCacheManagerImpl;
+import darklord.api.VoldemortAdminClient;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -31,7 +31,17 @@
         <maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
         <maven-clean-plugin.version>2.5</maven-clean-plugin.version>
         <versions-maven-plugin.version>2.1</versions-maven-plugin.version>
+        <cobertura-maven-plugin.version>2.6</cobertura-maven-plugin.version>
+        <coveralls-maven-plugin.version>2.0.1</coveralls-maven-plugin.version>
+        <coveralls-maven-plugin.repoToken>u7dw4b2knjvHM5YbjmI2vsKHDXf4FPcAq</coveralls-maven-plugin.repoToken>
     </properties>
+
+    <developers>
+        <developer>
+            <name>Lemi Orhan Ergin</name>
+            <email>lemiorhan@gmail.com</email>
+        </developer>
+    </developers>
 
     <modules>
         <module>darklord-client</module>
@@ -141,6 +151,25 @@
                             <followSymlinks>false</followSymlinks>
                         </fileset>
                     </filesets>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>${cobertura-maven-plugin.version}</version>
+                <configuration>
+                    <format>xml</format>
+                    <maxmem>256m</maxmem>
+                    <aggregate>true</aggregate>
+                    <check/>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>${coveralls-maven-plugin.version}</version>
+                <configuration>
+                    <repoToken>${coveralls-maven-plugin.repoToken}</repoToken>
                 </configuration>
             </plugin>
         </plugins>

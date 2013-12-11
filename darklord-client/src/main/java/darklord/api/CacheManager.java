@@ -1,4 +1,4 @@
-package darklord.client;
+package darklord.api;
 
 /**
  * It represents the administration functionality of the caches. The main reason of having a separate class for

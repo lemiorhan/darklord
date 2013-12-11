@@ -1,7 +1,5 @@
 package darklord.client;
 
-import darklord.client.impl.VoldemortCacheFactoryImpl;
-import darklord.client.impl.VoldemortCacheImpl;
 import org.junit.Test;
 
 import java.io.IOException;

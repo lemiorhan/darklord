@@ -1,7 +1,7 @@
-package darklord.client.impl;
+package darklord.client;
 
-import darklord.client.CacheManager;
-import darklord.client.VoldemortAdminClient;
+import darklord.api.CacheManager;
+import darklord.api.VoldemortAdminClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

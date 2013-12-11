@@ -1,6 +1,6 @@
-package darklord.client.impl;
+package darklord.client;
 
-import darklord.client.CacheFactory;
+import darklord.api.CacheFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import voldemort.client.*;

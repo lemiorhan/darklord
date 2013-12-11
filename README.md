@@ -10,38 +10,34 @@ Project Voldemort is a distributed data store that is designed as a key-value st
 
 Project Voldemort already has a Java API which is used by Voldemort internally. But DarkLord provides a tiny API as an abstraction on top of official Voldemort client API.
 
-Purpose
--------
+### Purpose
 
 The current design of original Voldemort API is not TDD friendly. The main aim to build such an API is build Voldemort-dependent software by using test driven development.
 
-Client API
-----------
+### Client API
 
 *darklord-client* API provides a java client using the original Voldemort Java API.
 
-Server API
-----------
+### Server API
 
 *darklord-server* API provides a server implementation to startup on local machines for testing purposes. This provides capability to develop or test without any need to Voldemort server installation.
 
-Main Dependencies
------------------
+### Main Dependencies
+
 * Java 7
 * Voldemort-1.3.0 
 
-Copyright and License
-=====================
-Copyright 2013 [Lemi Orhan Ergin](http://www.lemiorhanergin.com)
+### Contributors
+
+Copyright (C) Lemi Orhan Ergin
+
+### License
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
 [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-
-
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lemiorhan/darklord/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
