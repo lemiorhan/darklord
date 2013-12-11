@@ -5,6 +5,8 @@
 # *.[oa]
 # *~
 
+release.properties
+
 # IDEA Config files
 *.iml
 *.ipr
