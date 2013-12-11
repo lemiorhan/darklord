@@ -143,27 +143,6 @@
                     </filesets>
                 </configuration>
             </plugin>
-	<plugin>
-	    <groupId>org.jacoco</groupId>
-	    <artifactId>jacoco-maven-plugin</artifactId>
-	    <version>0.6.3.201306030806</version>
-	    <executions>
-	        <execution>
-	            <id>prepare-agent</id>
-	            <goals>
-	                <goal>prepare-agent</goal>
-	            </goals>
-	        </execution>
-	    </executions>
-	</plugin>
-            <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
-                <version>2.0.1</version>
-                <configuration>
-                   <repoToken>u7dw4b2knjvHM5YbjmI2vsKHDXf4FPcAq</repoToken>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
