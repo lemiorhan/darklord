@@ -29,7 +29,7 @@ The current design of original Voldemort API is not TDD friendly. It's sometimes
 
 ### Contributors
 
-Copyright (C) Lemi Orhan Ergin
+Copyright (C) [Lemi Orhan Ergin](http://www.lemiorhanergin.com)
 
 ### License
 
