@@ -23,7 +23,7 @@
             <version>2.6</version>
         </dependency>
         <dependency>
-            <groupId>com.agilistanbul</groupId>
+            <groupId>com.agilistanbul.darklord</groupId>
             <artifactId>darklord-server</artifactId>
             <scope>test</scope>
             <version>${project.version}</version>
