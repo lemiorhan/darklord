@@ -1,8 +1,9 @@
 DarkLord
 ========
-[![build status](https://secure.travis-ci.org/lemiorhan/darklord.png)](http://travis-ci.org/lemiorhan/darklord) [![Coverage Status](https://coveralls.io/repos/lemiorhan/darklord/badge.png?branch=master)](https://coveralls.io/r/lemiorhan/darklord?branch=master)
 
 DarkLord is a Java API for [Project Voldemort](http://www.project-voldemort.com/voldemort/). It uses official Voldemort Java API and provides additional abstraction.
+
+[![build status](https://secure.travis-ci.org/lemiorhan/darklord.png)](http://travis-ci.org/lemiorhan/darklord) [![Coverage Status](https://coveralls.io/repos/lemiorhan/darklord/badge.png?branch=master)](https://coveralls.io/r/lemiorhan/darklord?branch=master)
 
 It is named after the fictional Harry Potter villain [Lord Voldemort](http://en.wikipedia.org/wiki/Lord_Voldemort). The Dark Lord is used as a nick name for the Lord Voldemort. In the series, almost no witch or wizard dares to speak his name, instead referring to him by epithets such as "You-Know-Who", "He-Who-Must-Not-Be-Named" or "**the Dark Lord**".
 
