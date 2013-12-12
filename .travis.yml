@@ -7,6 +7,7 @@ env:
   global:
     secure: JvLAlQjgrOaYMFHm+v+jUnEZoovhTaWyxGTNlf88yrAaO1CQqhiHT1xG4HhB13KBQPzOQDp14LNbYN3wUdLdJ77evIcwVHOIQ2IuV/LpFlzE2Blo8LJ3nLGV6r08kEykTff47YUUgLsvKmKhBs2IyOY3uRpCzo7IO//aetlE5pU=
 
+install: mvn validate
 script: mvn clean test
 
 after_success:
