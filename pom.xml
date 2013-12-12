@@ -10,7 +10,7 @@
 
     <groupId>com.agilistanbul</groupId>
     <artifactId>darklord</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>DarkLord</name>
@@ -50,18 +50,18 @@
     </scm>
 
     <properties>
-
-        <!-- Configurations -->
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Main Configurations -->
+
         <java.version>1.7</java.version>
+        <voldemort.version>1.3.0</voldemort.version>
 
         <!-- Dependency versions -->
 
         <slf4j.version>1.7.5</slf4j.version>
         <junit.version>4.11</junit.version>
         <easymock.version>3.2</easymock.version>
-        <voldemort.version>1.3.0</voldemort.version>
         <jdom.version>1.0</jdom.version>
         <protobuf-java.version>2.4.1</protobuf-java.version>
         <guava.version>15.0</guava.version>
@@ -91,40 +91,12 @@
         <versions-maven-plugin.version>2.1</versions-maven-plugin.version>
         <cobertura-maven-plugin.version>2.6</cobertura-maven-plugin.version>
         <coveralls-maven-plugin.version>2.0.1</coveralls-maven-plugin.version>
-        <coveralls-maven-plugin.repoToken>u7dw4b2knjvHM5YbjmI2vsKHDXf4FPcAq</coveralls-maven-plugin.repoToken>
         <maven-javadoc-plugin.version>2.9</maven-javadoc-plugin.version>
         <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
         <maven-release-plugin.version>2.3.2</maven-release-plugin.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.easymock</groupId>
-            <artifactId>easymock</artifactId>
-            <version>${easymock.version}</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>voldemort</groupId>
             <artifactId>voldemort</artifactId>
@@ -159,6 +131,42 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
+        </dependency>
+
+        <!-- Logging Dependencies -->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Test Dependencies -->
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.easymock</groupId>
+            <artifactId>easymock</artifactId>
+            <version>${easymock.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -219,7 +227,7 @@
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>${coveralls-maven-plugin.version}</version>
                 <configuration>
-                    <repoToken>${coveralls-maven-plugin.repoToken}</repoToken>
+                    <repoToken>${env.COVERALLS_TOKEN}</repoToken>
                 </configuration>
             </plugin>
             <plugin>
@@ -322,20 +330,4 @@
         </profile>
     </profiles>
 
-
-    <!--
-        Voldemort repo is required for attaching Voldemort client API
-        which is originally not located in any Maven repository
-     -->
-    <repositories>
-        <repository>
-            <id>voldemort</id>
-            <url>http://maven.research-infrastructures.eu/nexus/content/repositories/dnet-deps</url>
-        </repository>
-        <repository>
-            <id>sonatype</id>
-            <name>Sonatype Groups</name>
-            <url>https://oss.sonatype.org/content/groups/public/</url>
-        </repository>
-    </repositories>
 </project>

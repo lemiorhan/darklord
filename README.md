@@ -25,7 +25,31 @@ The current design of original Voldemort API is not TDD friendly. It's sometimes
 ### Main Dependencies
 
 * Java 7
-* Voldemort-1.3.0 
+* Voldemort-1.3.0
+
+### Usage
+
+For maven users, you can add DarkLord-Client as the following.
+
+```xml
+<dependency>
+    <groupId>com.agilistanbul</groupId>
+    <artifactId>darklord-client</artifactId>
+    <version>0.1-SNAPSHOT</version>
+</dependency>
+```
+
+And you can defined the dependency to DarkLord-Server as follows.
+
+```xml
+<dependency>
+    <groupId>com.agilistanbul</groupId>
+    <artifactId>darklord-server</artifactId>
+    <version>0.1-SNAPSHOT</version>
+</dependency>
+```
+
+Please note that Voldemort-1.3.0 is not available in central maven repository. You should download and add it to your local repository by yourself.
 
 ### Contributors
 

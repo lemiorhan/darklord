@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.agilistanbul</groupId>
         <artifactId>darklord</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,6 +12,8 @@
 
     <name>DarkLord Server API</name>
     <description>Server API of DarkLord - Java Client for Voldemort</description>
+
+    <!-- All the following dependencies are required to run Voldemort Server API-->
 
     <dependencies>
         <dependency>
