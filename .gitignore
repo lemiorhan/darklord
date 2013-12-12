@@ -22,7 +22,6 @@ target/
 # Project generated files
 *.log
 *.patch
-*.jar
 *.ser
 
 # OS generated files
