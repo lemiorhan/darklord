@@ -24,8 +24,12 @@ The current design of original Voldemort API is not TDD friendly. It's sometimes
 
 ### Main Dependencies
 
-* Java 7
+Java version:
+* Java 7 
+
+Libraries not available in central maven repository. You can access these libraries from project's `lib/` folder and copy to your local maven repository:
 * Voldemort-1.3.0
+* Je-4.1.17
 
 ### Usage
 
