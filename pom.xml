@@ -273,19 +273,19 @@
                         <goals>
                             <goal>exec</goal>
                         </goals>
+                        <configuration>
+                            <executable>mvn</executable>
+                            <arguments>
+                                <argument>install:install-file</argument>
+                                <argument>-Dfile=lib/voldemort-${voldemort.version}.jar</argument>
+                                <argument>-DgroupId=voldemort</argument>
+                                <argument>-DartifactId=voldemort</argument>
+                                <argument>-Dversion=${voldemort.version}</argument>
+                                <argument>-Dpackaging=jar</argument>
+                            </arguments>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <executable>mvn</executable>
-                    <arguments>
-                        <argument>install:install-file</argument>
-                        <argument>-Dfile=lib/voldemort-${voldemort.version}.jar</argument>
-                        <argument>-DgroupId=voldemort</argument>
-                        <argument>-DartifactId=voldemort</argument>
-                        <argument>-Dversion=${voldemort.version}</argument>
-                        <argument>-Dpackaging=jar</argument>
-                    </arguments>
-                </configuration>
             </plugin>
         </plugins>
         <resources>
