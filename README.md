@@ -56,6 +56,10 @@ And you can defined the dependency to DarkLord-Server as follows.
 
 Please note that Voldemort-1.3.0 is not available in central maven repository. You should download and add it to your local repository by yourself.
 
+### Configuring Server and Client
+
+Voldemort server and clients can be configured by changing values of the predefined settings. The list of all possible settings are added to the codebase as sample files. You can check the settings of Voldemort server from [server.properties](../darklord-server/src/main/java/com/agilistanbul/darklord/sample/server.properties.sample), the settings of Voldemort client from [client.properties](../darklord-server/src/main/java/com/agilistanbul/darklord/client/client.properties.sample) and the settings of Voldemort admin client from [admin.properties](../darklord-server/src/main/java/com/agilistanbul/darklord/client/admin.properties.sample) files.
+
 ### Contributors
 
 Copyright (C) [Lemi Orhan Ergin](http://www.lemiorhanergin.com)
