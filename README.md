@@ -40,7 +40,7 @@ For maven users, you can add DarkLord-Client as the following.
 <dependency>
     <groupId>com.agilistanbul</groupId>
     <artifactId>darklord-client</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
 </dependency>
 ```
 
@@ -50,7 +50,7 @@ And you can defined the dependency to DarkLord-Server as follows.
 <dependency>
     <groupId>com.agilistanbul</groupId>
     <artifactId>darklord-server</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
 </dependency>
 ```
 
