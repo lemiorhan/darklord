@@ -421,14 +421,6 @@
                     </reportSet>
                 </reportSets>
             </plugin>
-            <plugin> 
-                <groupId>org.apache.maven.plugins</groupId> 
-                <artifactId>maven-project-info-reports-plugin</artifactId> 
-                <configuration> 
-                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled> 
-                    <offline>true</offline> 
-                </configuration> 
-            </plugin> 
         </plugins>
     </reporting>
 
