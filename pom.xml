@@ -9,7 +9,7 @@
 
     <groupId>com.agilistanbul</groupId>
     <artifactId>darklord</artifactId>
-    <version>0.1.1</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>DarkLord</name>
