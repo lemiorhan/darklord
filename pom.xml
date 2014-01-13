@@ -44,9 +44,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:lemiorhan/darklord.git</connection>
-        <developerConnection>scm:git:git@github.com:lemiorhan/darklord.git</developerConnection>
-        <url>git@github.com:lemiorhan/darklord.git</url>
+        <connection>scm:git:https://github.com/lemiorhan/darklord.git</connection>
+        <developerConnection>scm:git:https://github.com/lemiorhan/darklord.git</developerConnection>
+        <url>https://github.com/lemiorhan/darklord.git</url>
     </scm>
 
     <properties>
