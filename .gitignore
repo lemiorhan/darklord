@@ -34,3 +34,4 @@ target/
 #Project related files
 data/
 .clover/
+*.releaseBackup

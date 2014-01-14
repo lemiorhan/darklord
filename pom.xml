@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -10,7 +9,7 @@
 
     <groupId>com.agilistanbul</groupId>
     <artifactId>darklord</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>DarkLord</name>
@@ -44,9 +43,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:lemiorhan/darklord.git</connection>
-        <developerConnection>scm:git:git@github.com:lemiorhan/darklord.git</developerConnection>
-        <url>git@github.com:lemiorhan/darklord.git</url>
+        <connection>scm:git:https://github.com/lemiorhan/darklord.git</connection>
+        <developerConnection>scm:git:https://github.com/lemiorhan/darklord.git</developerConnection>
+        <url>https://github.com/lemiorhan/darklord.git</url>
     </scm>
 
     <properties>
@@ -300,7 +299,7 @@
                     <format>xml</format>
                     <maxmem>256m</maxmem>
                     <aggregate>true</aggregate>
-                    <check/>
+                    <check />
                 </configuration>
             </plugin>
             <plugin>
@@ -452,6 +451,12 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
                         <version>${maven-release-plugin.version}</version>
+                        <configuration>
+                            <tagNameFormat>v@{project.version}</tagNameFormat>
+                            <mavenExecutorId>forked-path</mavenExecutorId>
+                            <useReleaseProfile>false</useReleaseProfile>
+                            <arguments>${arguments} -Psonatype-oss-release</arguments>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>

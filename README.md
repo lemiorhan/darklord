@@ -34,23 +34,21 @@ Libraries not available in central maven repository. You can access these librar
 
 ### Usage
 
-For maven users, you can add DarkLord-Client as the following.
+For maven users, you can add DarkLord-Client and DarkLord-Server from OSS Central Maven Repository as the following.
 
 ```xml
 <dependency>
     <groupId>com.agilistanbul</groupId>
     <artifactId>darklord-client</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1.1</version>
 </dependency>
 ```
-
-And you can defined the dependency to DarkLord-Server as follows.
 
 ```xml
 <dependency>
     <groupId>com.agilistanbul</groupId>
     <artifactId>darklord-server</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
