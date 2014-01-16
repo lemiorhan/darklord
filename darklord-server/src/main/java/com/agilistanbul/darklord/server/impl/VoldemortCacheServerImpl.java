@@ -1,11 +1,14 @@
 package com.agilistanbul.darklord.server.impl;
 
+import com.agilistanbul.darklord.commons.utils.ResourceUtils;
 import com.agilistanbul.darklord.server.CacheServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import voldemort.common.service.VoldemortService;
 import voldemort.server.VoldemortConfig;
 import voldemort.server.VoldemortServer;
+
+import java.io.IOException;
 
 /**
  * This is a local Voldemort server that can be started and stopped. It is not mandatory to have Voldemort installed on
@@ -28,8 +31,9 @@ public class VoldemortCacheServerImpl implements CacheServer {
 
     private VoldemortConfig config;
 
-    public VoldemortCacheServerImpl(String voldemortHomePath, String voldemortConfigPath) {
-        config = VoldemortConfig.loadFromVoldemortHome(voldemortHomePath, voldemortConfigPath);
+    public VoldemortCacheServerImpl(String voldemortHomePath, String voldemortConfigPath) throws IOException {
+        config = VoldemortConfig.loadFromVoldemortHome(ResourceUtils.getFile(this.getClass(), voldemortHomePath).getAbsolutePath(),
+                ResourceUtils.getFile(this.getClass(),voldemortConfigPath).getAbsolutePath());
     }
 
     public VoldemortCacheServerImpl(VoldemortService server, VoldemortConfig config) {

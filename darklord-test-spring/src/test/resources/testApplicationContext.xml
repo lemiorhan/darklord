@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <!-- SERVER SIDE -->
+
+    <bean id="voldemortServer" class="com.agilistanbul.darklord.server.impl.VoldemortCacheServerImpl" init-method="start">
+        <constructor-arg index="0" type="java.lang.String" value="."/>
+        <constructor-arg index="1" type="java.lang.String" value="voldemort/server"/>
+    </bean>
+
+    <!-- CLIENT SIDE -->
+
+    <bean id="cacheFactory" class="com.agilistanbul.darklord.client.impl.VoldemortCacheFactoryImpl">
+        <constructor-arg index="0">
+            <list>
+                <value>tcp://localhost:6666</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="1" value="voldemort/client/client.properties"/>
+    </bean>
+
+    <!-- BE AWARE THAT stores.xml SHOULD BE CONFIGURED FOR THESE STORES -->
+
+    <bean id="newsletterAssetCache" factory-bean="cacheFactory" factory-method="get">
+        <constructor-arg value="newsletter"/>
+    </bean>
+
+    <bean id="hubPageAssetCache" factory-bean="cacheFactory" factory-method="get">
+        <constructor-arg value="hubPage"/>
+    </bean>
+
+</beans>

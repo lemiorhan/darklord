@@ -1,6 +1,5 @@
-package com.agilistanbul.darklord.client.utils;
+package com.agilistanbul.darklord.commons.utils;
 
-import com.agilistanbul.darklord.client.impl.utils.PropertiesUtils;
 import org.junit.Test;
 
 import java.io.IOException;

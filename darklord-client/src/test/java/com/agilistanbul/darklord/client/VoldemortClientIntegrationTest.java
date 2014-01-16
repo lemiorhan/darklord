@@ -2,9 +2,8 @@ package com.agilistanbul.darklord.client;
 
 import com.agilistanbul.darklord.client.impl.VoldemortAdminClientImpl;
 import com.agilistanbul.darklord.client.impl.VoldemortCacheFactoryImpl;
-import com.agilistanbul.darklord.client.impl.VoldemortCacheImpl;
 import com.agilistanbul.darklord.client.impl.VoldemortCacheManagerImpl;
-import com.agilistanbul.darklord.client.impl.utils.ResourceUtils;
+import com.agilistanbul.darklord.commons.utils.ResourceUtils;
 import com.agilistanbul.darklord.server.impl.VoldemortCacheServerImpl;
 import org.junit.After;
 import org.junit.Before;
@@ -49,7 +48,7 @@ public class VoldemortClientIntegrationTest {
         VoldemortCacheFactoryImpl<String, Object> cacheFactory = new VoldemortCacheFactoryImpl<>(Arrays.asList("tcp://localhost:6666"),
                 getClass().getResource("/com/agilistanbul/darklord/client/client.properties").getPath());
 
-        VoldemortCacheImpl<String, Object> assetCache = cacheFactory.get("asset");
+        Cache<String, Object> assetCache = cacheFactory.get("asset");
 
         // put
         assetCache.put("key", "value");
@@ -89,7 +88,7 @@ public class VoldemortClientIntegrationTest {
         VoldemortCacheManagerImpl manager = new VoldemortCacheManagerImpl(adminClient);
 
 
-        VoldemortCacheImpl<String, Object> assetCache = cacheFactory.get("asset");
+        Cache<String, Object> assetCache = cacheFactory.get("asset");
 
         // clear all in all nodes
         assetCache.put("key", "value");
@@ -130,7 +129,7 @@ public class VoldemortClientIntegrationTest {
                 ResourceUtils.getClasspathResource(this.getClass(), "/com/agilistanbul/darklord/client/admin.properties").getAbsolutePath());
 
         VoldemortCacheManagerImpl manager = new VoldemortCacheManagerImpl(adminClient);
-        VoldemortCacheImpl<String, Object> assetCache = cacheFactory.get("asset");
+        Cache<String, Object> assetCache = cacheFactory.get("asset");
 
         server.stop(); // server stops now!
 
@@ -157,7 +156,7 @@ public class VoldemortClientIntegrationTest {
         VoldemortCacheFactoryImpl cacheFactory = new VoldemortCacheFactoryImpl(Arrays.asList("tcp://localhost:6666"),
                 getClass().getResource("/com/agilistanbul/darklord/client/client.properties").getPath());
 
-        VoldemortCacheImpl assetCache = cacheFactory.get("asset");
+        Cache assetCache = cacheFactory.get("asset");
         assertNotNull(assetCache);
     }
 

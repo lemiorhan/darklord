@@ -83,7 +83,8 @@ public class VoldemortCacheImpl<K, V> implements Cache<K, V> {
             return;
         }
         try {
-            Version version = storeClient.put(key, (V) SerializationUtils.serialize((Serializable) value));
+            Version version = storeClient.put(key,
+                    (V) SerializationUtils.serialize((Serializable) value));
             logger.info("[Voldemort SUCCESS] operation: put, store: {}, key: {}, version: {}", storeName, key, version);
         } catch (Exception exception) {
             logger.error("[Voldemort ERROR] operation: put, store: {}, key: {}", storeName, key, exception);

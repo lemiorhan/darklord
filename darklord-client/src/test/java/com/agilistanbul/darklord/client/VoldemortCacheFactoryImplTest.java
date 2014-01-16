@@ -46,13 +46,13 @@ public class VoldemortCacheFactoryImplTest {
         factory = new VoldemortCacheFactoryImpl<>(Arrays.asList("tcp://localhost:6666"),
                 getClass().getResource("/com/agilistanbul/darklord/client/clientForTest.properties").getPath());
 
-        VoldemortCacheImpl cache1 = factory.get("store1");
+        Cache cache1 = factory.get("store1");
         assertNotNull(cache1);
 
-        VoldemortCacheImpl cache2 = factory.get("store1");
+        Cache cache2 = factory.get("store1");
         assertEquals(cache2, cache1); // cache should be reused
 
-        VoldemortCacheImpl cache3 = factory.get("storeXYZ");
+        Cache cache3 = factory.get("storeXYZ");
         assertNotEquals(cache3, cache1); // cache should be different
     }
 }

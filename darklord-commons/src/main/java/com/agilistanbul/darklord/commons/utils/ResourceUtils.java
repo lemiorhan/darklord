@@ -1,4 +1,4 @@
-package com.agilistanbul.darklord.client.impl.utils;
+package com.agilistanbul.darklord.commons.utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,4 +18,8 @@ public class ResourceUtils {
         }
     }
 
+    public static File getFile(Class clazz, String path) throws IOException {
+        File absoluteFile = new File(path);
+        return absoluteFile.exists() ? absoluteFile : getClasspathResource(clazz, path);
+    }
 }

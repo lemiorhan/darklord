@@ -1,4 +1,4 @@
-package com.agilistanbul.darklord.client.impl.utils;
+package com.agilistanbul.darklord.commons.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

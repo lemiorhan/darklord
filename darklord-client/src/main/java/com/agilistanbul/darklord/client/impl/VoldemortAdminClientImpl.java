@@ -1,7 +1,7 @@
 package com.agilistanbul.darklord.client.impl;
 
 import com.agilistanbul.darklord.client.VoldemortAdminClient;
-import com.agilistanbul.darklord.client.impl.utils.PropertiesUtils;
+import com.agilistanbul.darklord.commons.utils.PropertiesUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import voldemort.client.protocol.admin.AdminClient;

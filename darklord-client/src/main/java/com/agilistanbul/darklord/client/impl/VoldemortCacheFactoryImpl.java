@@ -1,11 +1,12 @@
 package com.agilistanbul.darklord.client.impl;
 
+import com.agilistanbul.darklord.client.Cache;
 import com.agilistanbul.darklord.client.CacheFactory;
+import com.agilistanbul.darklord.commons.utils.ResourceUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import voldemort.client.*;
 
-import java.io.File;
 import java.util.List;
 
 /**
@@ -23,7 +24,7 @@ import java.util.List;
  * @author Lemi Orhan Ergin
  * @since 02.12.2013
  */
-public class VoldemortCacheFactoryImpl<K, V> implements CacheFactory<K, V, VoldemortCacheImpl<K, V>> {
+public class VoldemortCacheFactoryImpl<K, V> implements CacheFactory<K, V, Cache<K, V>> {
 
     private static final Logger logger = LoggerFactory.getLogger(VoldemortCacheFactoryImpl.class);
 
@@ -33,7 +34,7 @@ public class VoldemortCacheFactoryImpl<K, V> implements CacheFactory<K, V, Volde
         try {
             clientFactory = new CachingStoreClientFactory(
                     new SocketStoreClientFactory(
-                            new ClientConfig(new File(configFilePath)).setBootstrapUrls(nodeUrls)
+                            new ClientConfig(ResourceUtils.getFile(this.getClass(), configFilePath)).setBootstrapUrls(nodeUrls)
                     ));
         } catch (Exception e) {
             logger.error("Unable to create cache factory", e);
@@ -41,7 +42,7 @@ public class VoldemortCacheFactoryImpl<K, V> implements CacheFactory<K, V, Volde
     }
 
     @Override
-    public VoldemortCacheImpl<K, V> get(String cacheName) {
+    public Cache<K, V> get(String cacheName) {
         return new VoldemortCacheImpl<>(cacheName, (StoreClient<K, V>) clientFactory.getStoreClient(cacheName));
     }
 }
