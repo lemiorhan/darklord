@@ -16,7 +16,7 @@ public class PropertiesUtilsTest {
 
     @Test
     public void loadFromFilesystemResource() throws Exception {
-        String absolutePath = getClass().getResource("/com/agilistanbul/darklord/client/sample.properties").getPath();
+        String absolutePath = getClass().getResource("/sample.properties").getPath();
         Properties props = PropertiesUtils.loadFromFilesystemResource(absolutePath);
         assertProperties(props);
     }
@@ -30,21 +30,21 @@ public class PropertiesUtilsTest {
     @Test
     public void testLoadFromClasspathResource() throws Exception {
         Properties props = PropertiesUtils.loadFromClasspathResource(this.getClass(),
-                "com/agilistanbul/darklord/client/sample.properties");
+                "sample.properties");
         assertProperties(props);
     }
 
     @Test
     public void testLoadFromClasspathResourceWithSlash() throws Exception {
         Properties props = PropertiesUtils.loadFromClasspathResource(this.getClass(),
-                "/com/agilistanbul/darklord/client/sample.properties");
+                "/sample.properties");
         assertProperties(props);
     }
 
     @Test (expected = IOException.class)
     public void testLoadFromClasspathResourceNoFileFound() throws Exception {
         PropertiesUtils.loadFromClasspathResource(this.getClass(),
-                "/com/agilistanbul/darklord/client/nonExisting.properties");
+                "/nonExisting.properties");
     }
 
     private void assertProperties(Properties props) {

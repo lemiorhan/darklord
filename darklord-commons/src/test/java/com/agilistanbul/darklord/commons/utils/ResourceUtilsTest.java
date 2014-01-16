@@ -39,6 +39,6 @@ public class ResourceUtilsTest {
 
     @Test
     public void getFileFromRelativePathForMissingInAbsolutePath() throws IOException {
-        assertTrue(ResourceUtils.getFile(this.getClass(), "com/agilistanbul/darklord/testfile.txt").exists());
+        assertTrue(ResourceUtils.getFile(this.getClass(), "log4j.properties").exists());
     }
 }
