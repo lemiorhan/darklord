@@ -38,8 +38,8 @@ public class SelfPopulatingCacheIntegrationTest {
         AssetId assetId12 = new AssetIdImpl("newsletter", 12L);
         Asset asset12 = new AssetImpl(assetId12, "Newsletter for AssetIdImpl[id=12,type=newsletter]");
 
-        assertNotNull(provider.get(assetId12));
-        assertEquals(asset12, provider.get(assetId12));
+        Asset assetFetched = provider.get(assetId12);
+        assertEquals(asset12, assetFetched);
 
         // from voldemort
 
