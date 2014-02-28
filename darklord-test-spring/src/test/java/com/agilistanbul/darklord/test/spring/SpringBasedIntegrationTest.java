@@ -1,10 +1,10 @@
 package com.agilistanbul.darklord.test.spring;
 
 import com.agilistanbul.darklord.client.Cache;
-import com.agilistanbul.darklord.testapi.asset.Asset;
-import com.agilistanbul.darklord.testapi.asset.AssetId;
-import com.agilistanbul.darklord.testapi.asset.AssetIdImpl;
-import com.agilistanbul.darklord.testapi.asset.AssetImpl;
+import com.agilistanbul.darklord.test.api.asset.Asset;
+import com.agilistanbul.darklord.test.api.asset.AssetId;
+import com.agilistanbul.darklord.test.api.asset.AssetIdImpl;
+import com.agilistanbul.darklord.test.api.asset.AssetImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

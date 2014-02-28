@@ -1,4 +1,4 @@
-package com.agilistanbul.darklord.testapi.asset;
+package com.agilistanbul.darklord.test.api.asset;
 
 /**
  * @author trerginl

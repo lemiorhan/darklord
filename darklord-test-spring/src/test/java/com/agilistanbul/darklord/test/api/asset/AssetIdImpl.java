@@ -1,4 +1,4 @@
-package com.agilistanbul.darklord.testapi.asset;
+package com.agilistanbul.darklord.test.api.asset;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -11,30 +11,30 @@ import java.io.Serializable;
  * @author trerginl
  * @since 16.01.2014
  */
-public class AssetImpl implements Asset, Serializable {
+public class AssetIdImpl implements AssetId, Serializable {
 
-    private AssetId assetId;
+    private long id;
 
-    private String content;
+    private String type;
 
-    public AssetImpl(AssetId assetId, String content) {
-        this.assetId = assetId;
-        this.content = content;
+    public AssetIdImpl(String type, long id) {
+        this.id = id;
+        this.type = type;
     }
 
     @Override
-    public AssetId getAssetId() {
-        return this.assetId;
+    public long getId() {
+        return this.id;
     }
 
     @Override
-    public String getContent() {
-        return content;
+    public String getType() {
+        return type;
     }
 
     @Override
     public boolean equals(Object o) {
-        return o instanceof AssetImpl && EqualsBuilder.reflectionEquals(this, o);
+        return o instanceof AssetIdImpl && EqualsBuilder.reflectionEquals(this, o);
     }
 
     @Override

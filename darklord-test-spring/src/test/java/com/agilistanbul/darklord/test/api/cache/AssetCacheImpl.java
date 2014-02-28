@@ -1,8 +1,8 @@
-package com.agilistanbul.darklord.testapi.cache;
+package com.agilistanbul.darklord.test.api.cache;
 
 import com.agilistanbul.darklord.client.impl.VoldemortCacheImpl;
-import com.agilistanbul.darklord.testapi.asset.Asset;
-import com.agilistanbul.darklord.testapi.asset.AssetId;
+import com.agilistanbul.darklord.test.api.asset.Asset;
+import com.agilistanbul.darklord.test.api.asset.AssetId;
 import voldemort.client.StoreClient;
 
 /**

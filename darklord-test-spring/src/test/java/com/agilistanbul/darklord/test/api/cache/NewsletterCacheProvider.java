@@ -1,7 +1,7 @@
-package com.agilistanbul.darklord.testapi.cache;
+package com.agilistanbul.darklord.test.api.cache;
 
-import com.agilistanbul.darklord.testapi.asset.Asset;
-import com.agilistanbul.darklord.testapi.asset.AssetId;
+import com.agilistanbul.darklord.test.api.asset.Asset;
+import com.agilistanbul.darklord.test.api.asset.AssetId;
 import net.sf.ehcache.Ehcache;
 import net.sf.ehcache.Element;
 import org.springframework.beans.factory.annotation.Autowired;
